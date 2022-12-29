@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "conteggio-ore-373022",
+  "private_key_id": "80ea8fca4f07d64a35c452a8f4e5938f486aa3e6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCpP/hzrmQVLWIT\nBeE/h0xRDc74t2AaxvGepDFs6kTK26kxDcgDr41JTtk9X5IOJdzLS2l+NxtdBJKw\nD/sKTQ6YWuo+9DFL0Ze6eq1Kl9dVPZnLZsEyNdDguESN3qZYSt0Yb+Y+9MESufkk\nYxupot7sdwITwsLtZr+1eRHlUj+v5GsatZBY8nO8r66aU9br9Z+MLJrAp0vqoeBa\nr5EDI6dWBajNyvwm4QchUzt9u5qMnZ5frAP3BL6o4dech9nQ8Y5sy+38SYHNhoZq\n6UKQ2Qh0+BgkNuOJjQu/f8CGMbYwsaYt1lYK+f1M44fDfKBCDlfd7vqQIY27KXA5\nrOg6J7d7AgMBAAECggEAN9IocIbw7WcldJ641soZ6pXCUJeyc8JvyGHhB0oQ3FMs\nb0hbUpPg5m/CCJLvygjE1KwPpBgqxzgN5VGv+4rEqI07uv2xEI+VGmUBqJuB4tRJ\nWCOQzq2fMa60tZHcjTxLxZaKevMghrudp1mkswNLwPPTVI8k2UXNLt46f8bryGfk\nUdHJE5SLIzNlHAzXFDhgvZVn8EI6RPLZ6L7dHzKnoTsrFT21IaXFnHsg7Iw5VpsT\nVrkveUbVw/LXCFVRpTSAccC8b8m8PCHlxRZQZU20rhBZkPzYQ1e8+6tW6dqWjFyA\ntL9mXwKK0Wq88EljmqtGF2lUL8x3ByU2XGuqCk9NuQKBgQDs7uk3Xnll7sMgnqn3\ns2AUe0awc1oNmuZh5/YrzegT2vFEtwEj1SshcCXtZMbLUuGkO+0i5eoU8nPvX0d0\nluh/0lkBXbytrnyJekpUUFtoxi3xFFB4EF0jZ/2FNHEr148eiIDTZRvDdJXKLpFU\nDGqij2avYEeLAOHZtGk1AL6WpwKBgQC23rTyH7/Po+WEDYY7otoC/rpuXMR9mgmy\n97H+oSqVIN5/rgi36SsBAylhSboB2OJQyjy0GlmxuLI1qLRhXAZcYJ1GXTf3/0XY\nziGVdvtnPSBCmDQZZROfA1sd/gMAiU1kIrusDGM1Ty70atvIqWOBu0OFw5TPdhHA\nsC96QbiHDQKBgQCZAUfWG8plyyRzYkL81PeNAncJ59QVyRxRyYwtiZD/kXoRF+VC\nkJyDwXqcrWG7V9CjUJe426So1lGMGYl5fyKxuNMFkNURjAaceT6a6DG/nYt5jdbR\nUi/zd2o+pTkYSOIBo8EdwsOFGzrID/6Fumb6h4SWaKSK3Yz8HAd81Pg/LQKBgQCI\nwFiOLAHzk/wB2V9FX44q6TSfbU4fIz8Xj7WS1hES/kaFMq8gYQSguC2MrGamFPuB\nMQteH8ptZdIW4Hcry3aSREm4oeNF2Kbx74wbyqNMW+CxDEMBrp2Srx7Hefniv8qZ\nFIRFr+nMps9VRkffchSQompnMJAq6H90Gg0XHuiQTQKBgGBstpuhV5mkTYpcfxR/\ngRqW4b7OVh1A7oVP2cC4AJrmzUkri+GpwLrwRq8eyyU0JlwrZaNKkIepP2B6fbTD\nlZ+FNX8WgEzwq2QLDpWdxk+rPDe3W0IQBrPdemsdujIWfLy+lVOM/9sOzSDRb759\nYJ81eFADCe+VT4MhC57xH4mk\n-----END PRIVATE KEY-----\n",
+  "client_email": "conteggio-ore@conteggio-ore-373022.iam.gserviceaccount.com",
+  "client_id": "118198681738103714323",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/conteggio-ore%40conteggio-ore-373022.iam.gserviceaccount.com"
+}
