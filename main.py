@@ -26,7 +26,7 @@ st.markdown('> Il campo nome non richiede una corrispondenza esatta e non è cas
 st.markdown('> ES: Per accedere al foglio Michele Vitulli, posso inserire mic, MIchele, MICHELE etc; se venissero trovate più corrispondenze <omonimi> il sistema genererà una notifica; (Per essere sicuro di accecere al mio foglio posso inserire semplicemente vit)')
 # --- Interfaccia ----
 form = st.form('form1')
-nome = form.text_input('Nome')
+nome = form.text_input('Nome e/o Cognome')
 options = ['call', 'formazione', 'task', 'altro']
 att = form.selectbox('Attività', options)
 n_ore = form.time_input('Numero di ore', datetime.time(1, 0))
