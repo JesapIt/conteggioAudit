@@ -19,11 +19,11 @@ scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/au
 creds = ServiceAccountCredentials.from_json_keyfile_name('key_conteggio.json', scope)
 client = gspread.authorize(creds)
 
+expander = st.expander("Vedi note")
+expander.markdown('## [Link al foglio google di test ](https://docs.google.com/spreadsheets/d/1f8zJ0iEwYia6sagTV11EDsDDgvwTm60SrdQvMhtJ3RI/edit?usp=sharing)')
 
-st.markdown('## [Link al foglio google di test ](https://docs.google.com/spreadsheets/d/1f8zJ0iEwYia6sagTV11EDsDDgvwTm60SrdQvMhtJ3RI/edit?usp=sharing)')
-
-st.markdown('> Il campo nome non richiede una corrispondenza esatta e non è case sensitive; tuttavia, nel caso di più risorse con lo stesso nome, è bene inserire e/o parti del congome')
-st.markdown('> ES: Per accedere al foglio Michele Vitulli, posso inserire mic, MIchele, MICHELE etc; se venissero trovate più corrispondenze <omonimi> il sistema genererà una notifica; (Per essere sicuro di accecere al mio foglio posso inserire semplicemente vit)')
+expander.markdown('> Il campo nome non richiede una corrispondenza esatta e non è case sensitive; tuttavia, nel caso di più risorse con lo stesso nome, è bene inserire e/o parti del congome')
+expander.markdown('> ES: Per accedere al foglio Michele Vitulli, posso inserire mic, MIchele, MICHELE etc; se venissero trovate più corrispondenze <omonimi> il sistema genererà una notifica; (Per essere sicuro di accecere al mio foglio posso inserire semplicemente vit)')
 # --- Interfaccia ----
 form = st.form('form1')
 nome = form.text_input('Nome e/o Cognome')
