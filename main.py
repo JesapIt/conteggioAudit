@@ -44,7 +44,10 @@ if sub and nome != '':
 		if lower_name in lower_title:
 			double +=1
 			current_work = w
-	if double > 1:
+	if double == 0:
+		st.danger('Nessun foglio trovato con questo nome')
+
+	elif double > 1:
 		st.warning('Sono stati trovati più fogli con questo nome, cerca di essre più specifico')
 	else:
 	# --- adding elements to google sheet ---
