@@ -4,7 +4,14 @@ import gspread
 from datetime import date
 import datetime
 
-
+st.set_page_config(page_title='Conteggio Ore', layout = 'wide', page_icon = '🕰️', initial_sidebar_state = 'auto')
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive',
          'https://www.googleapis.com/auth/drive.file', 'https://www.googleapis.com/auth/spreadsheets']
