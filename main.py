@@ -45,10 +45,10 @@ if sub and nome != '':
 			double +=1
 			current_work = w
 	if double == 0:
-		st.error('Nessun foglio trovato con questo nome')
+		st.error('Nessuna risorsa trovata')
 
 	elif double > 1:
-		st.warning('Sono stati trovati più fogli con questo nome, cerca di essre più specifico')
+		st.warning('Sono stati trovate più risorse con questo nome/cognome, cerca di essre più specifico')
 	else:
 	# --- adding elements to google sheet ---
 		def next_available_row(worksheet):
