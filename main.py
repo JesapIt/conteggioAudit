@@ -48,7 +48,7 @@ if sub and nome != '':
 		st.error('Nessuna risorsa trovata')
 
 	elif double > 1:
-		st.warning('Sono stati trovate più risorse con questo nome/cognome, cerca di essre più specifico')
+		st.warning('Sono state trovate più risorse con questo nome/cognome, cerca di essre più specifico')
 	else:
 	# --- adding elements to google sheet ---
 		def next_available_row(worksheet):
