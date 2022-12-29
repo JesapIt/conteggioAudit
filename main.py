@@ -28,24 +28,28 @@ sub = form.form_submit_button("Invia")
 sht = client.open_by_url("https://docs.google.com/spreadsheets/d/1f8zJ0iEwYia6sagTV11EDsDDgvwTm60SrdQvMhtJ3RI/edit#gid=0")
 # -- Selecting current worksheet ---
 if sub and nome != '':
+	double = 0
 	for w in sht.worksheets():
 		lower_title = w.title.lower()
 		lower_name = nome.lower()
 		if lower_name in lower_title:
+			double +=1
 			current_work = w
-	
+	if double > 1:
+		st.warning('Sono stati trovati più fogli con questo nome, cerca di essre più specifico')
+	else:
 	# --- adding elements to google sheet ---
-	def next_available_row(worksheet):
-		str_list = list(filter(None, worksheet.col_values(1)))
-		return str(len(str_list)+1)
+		def next_available_row(worksheet):
+			str_list = list(filter(None, worksheet.col_values(1)))
+			return str(len(str_list)+1)
 
-	row = next_available_row(current_work)
-	current_work.update_cell(row , 1, str(data))
-	current_work.update_cell(row , 2, att)
-	current_work.update_cell(row , 3, str(n_ore).replace(':', '.'))
+		row = next_available_row(current_work)
+		current_work.update_cell(row , 1, str(data))
+		current_work.update_cell(row , 2, att)
+		current_work.update_cell(row , 3, str(n_ore).replace(':', '.'))
 
 
-	st.success('Conteggio ore aggiornato')
+		st.success('Conteggio ore aggiornato')
 	
 
 # --- trovo la colonna libera successiva ---
