@@ -45,7 +45,7 @@ if sub and nome != '':
 			double +=1
 			current_work = w
 	if double == 0:
-		st.danger('Nessun foglio trovato con questo nome')
+		st.error('Nessun foglio trovato con questo nome')
 
 	elif double > 1:
 		st.warning('Sono stati trovati più fogli con questo nome, cerca di essre più specifico')
