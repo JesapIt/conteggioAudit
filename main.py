@@ -16,7 +16,7 @@ client = gspread.authorize(creds)
 st.markdown('## [Link al foglio google di test ](https://docs.google.com/spreadsheets/d/1f8zJ0iEwYia6sagTV11EDsDDgvwTm60SrdQvMhtJ3RI/edit?usp=sharing)')
 # --- Interfaccia ----
 form = st.form('form1')
-nome = form.text_input('Inserisci il tuo nome')
+nome = form.text_input('Nome')
 options = ['call', 'formazione', 'task', 'altro']
 att = form.selectbox('Attività', options)
 n_ore = form.time_input('Numero di ore', datetime.time(1, 0))
