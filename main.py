@@ -61,7 +61,7 @@ if sub and nome != '':
 		current_work.update_cell(row , 3, str(n_ore).replace(':', '.'))
 
 
-		st.success('Conteggio ore aggiornato')
+		st.success(f'Conteggio ore di {current_work.title} aggiornato')
 	
 
 # --- trovo la colonna libera successiva ---
