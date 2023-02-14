@@ -20,7 +20,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name('key_conteggio.json', s
 client = gspread.authorize(creds)
 
 
-st.markdown('## [Link al foglio google di test ](https://docs.google.com/spreadsheets/d/1f8zJ0iEwYia6sagTV11EDsDDgvwTm60SrdQvMhtJ3RI/edit?usp=sharing)')
+st.markdown('## Area Audit')
 
 
 # --- Interfaccia ----
@@ -34,16 +34,14 @@ for a in att:
 data = st.date_input('Data', value=date.today())
 data = data.strftime("%d/%m/%Y")
 
-
-
 sub = st.button("Invia")
 
 
 
 
 
-
-sht = client.open_by_url("https://docs.google.com/spreadsheets/d/1f8zJ0iEwYia6sagTV11EDsDDgvwTm60SrdQvMhtJ3RI/edit#gid=0")
+link_audit = "https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcfV2bhGURgrsAoIdbGM/edit#gid=0"
+sht = client.open_by_url(link_audit)
 # -- Selecting current worksheet ---
 if sub and nome != '':
 	double = 0
@@ -75,6 +73,7 @@ if sub and nome != '':
 	
 
 # --- trovo la colonna libera successiva ---
+st.markdown('---')
 expander = st.expander("Vedi note")
 expander.markdown('> Il campo nome non richiede una corrispondenza esatta e non è case sensitive; tuttavia, nel caso di più risorse con lo stesso nome, è bene inserire e/o parti del congome')
 expander.markdown('> ES: Per accedere al foglio Michele Vitulli, posso inserire mic, MIchele, MICHELE etc; se venissero trovate più corrispondenze <omonimi> il sistema genererà una notifica; (Per essere sicuro di accecere al mio foglio posso inserire semplicemente vit) ---🦈')
