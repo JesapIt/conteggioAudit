@@ -24,14 +24,23 @@ st.markdown('## [Link al foglio google di test ](https://docs.google.com/spreads
 
 
 # --- Interfaccia ----
-form = st.form('form1')
-nome = form.text_input('Nome e/o Cognome')
+nome = st.text_input('Nome e/o Cognome')
 options = ['call', 'formazione', 'task', 'altro']
-att = form.selectbox('Attività', options)
-n_ore = form.time_input('Numero di ore', datetime.time(1, 0))
-data = form.date_input('Data', value=date.today())
+att = st.multiselect('Attività', options)
+dictionary = {}
+for a in att:
+	n_ore = st.time_input(f'Numero di ore {a}', datetime.time(1, 0), key=a)
+	dictionary[a] = n_ore
+data = st.date_input('Data', value=date.today())
+data = data.strftime("%d/%m/%Y")
 
-sub = form.form_submit_button("Invia")
+
+
+sub = st.button("Invia")
+
+
+
+
 
 
 sht = client.open_by_url("https://docs.google.com/spreadsheets/d/1f8zJ0iEwYia6sagTV11EDsDDgvwTm60SrdQvMhtJ3RI/edit#gid=0")
@@ -55,10 +64,11 @@ if sub and nome != '':
 			str_list = list(filter(None, worksheet.col_values(1)))
 			return str(len(str_list)+1)
 
-		row = next_available_row(current_work)
-		current_work.update_cell(row , 1, str(data))
-		current_work.update_cell(row , 2, att)
-		current_work.update_cell(row , 3, str(n_ore).replace(':', '.'))
+		for a in att:
+			row = next_available_row(current_work)
+			current_work.update_cell(row , 1, str(data))
+			current_work.update_cell(row , 2, a)
+			current_work.update_cell(row , 3, str(dictionary[a]).replace(':', '.'))
 
 
 		st.success(f'Conteggio ore di {current_work.title} aggiornato')
