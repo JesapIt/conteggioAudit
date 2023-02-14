@@ -26,7 +26,7 @@ st.markdown('### [Link google sheet](https://docs.google.com/spreadsheets/d/1uZV
 
 # --- Interfaccia ----
 nome = st.text_input('Nome e/o Cognome')
-options = ['call', 'formazione', 'task', 'altro']
+options = ['call', 'formazione', 'task', 'progetto', 'altro']
 att = st.multiselect('Attività', options)
 dictionary = {}
 for a in att:
