@@ -74,11 +74,7 @@ if sub and nome != '':
 		st.success(f'Conteggio ore di {current_work.title} aggiornato')
 	
 
-# --- trovo la colonna libera successiva ---
-st.markdown('---')
-expander = st.expander("Vedi note")
-expander.markdown('> Il campo nome non richiede una corrispondenza esatta e non è case sensitive; tuttavia, nel caso di più risorse con lo stesso nome, è bene inserire e/o parti del congome')
-expander.markdown('> ES: Per accedere al foglio Michele Vitulli, posso inserire mic, MIchele, MICHELE etc; se venissero trovate più corrispondenze <omonimi> il sistema genererà una notifica; (Per essere sicuro di accecere al mio foglio posso inserire semplicemente vit) ---🦈')
+
 
 
 
