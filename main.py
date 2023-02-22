@@ -70,7 +70,7 @@ if sub and nome != '':
 			c1 = Cell(int(row) , 1, str(data))
 			c2 = Cell(int(row) , 2, a)
 			c3 = Cell(int(row) , 3, str(dictionary[a]).replace(':', '.'))
-			current_work.update_cells([c1,c2,c3])
+			current_work.update_cells([c1,c2,c3], value_input_option='USER_ENTERED')
 			#current_work.update_cell(row , 1, str(data))
 			#current_work.update_cell(row , 2, a)
 			#current_work.update_cell(row , 3, str(dictionary[a]).replace(':', '.'))
