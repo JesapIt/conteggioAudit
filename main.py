@@ -1,6 +1,7 @@
 import streamlit as st
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
+from gspread import Cell
 from datetime import date
 import datetime
 
@@ -66,9 +67,13 @@ if sub and nome != '':
 
 		for a in att:
 			row = next_available_row(current_work)
-			current_work.update_cell(row , 1, str(data))
-			current_work.update_cell(row , 2, a)
-			current_work.update_cell(row , 3, str(dictionary[a]).replace(':', '.'))
+			c1 = Cell(int(row) , 1, str(data))
+			c2 = Cell(int(row) , 2, a)
+			c3 = Cell(int(row) , 3, str(dictionary[a]).replace(':', '.'))
+			current_work.update_cells([c1,c2,c3])
+			#current_work.update_cell(row , 1, str(data))
+			#current_work.update_cell(row , 2, a)
+			#current_work.update_cell(row , 3, str(dictionary[a]).replace(':', '.'))
 
 
 		st.success(f'Conteggio ore di {current_work.title} aggiornato')
