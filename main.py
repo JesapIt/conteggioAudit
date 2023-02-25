@@ -6,11 +6,11 @@ from datetime import date
 import datetime
 from PIL import Image
 
+
+
 image = Image.open('jesap.png')
 
-st.image(image)
-
-st.set_page_config(page_title='Conteggio Ore', page_icon = '🕰️', initial_sidebar_state = 'auto')
+st.set_page_config(page_title='Conteggio Ore', page_icon = image, initial_sidebar_state = 'auto')
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
