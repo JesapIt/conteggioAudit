@@ -4,7 +4,7 @@ import gspread
 from gspread import Cell
 from datetime import date
 import datetime
-from PIL import image
+from PIL import Image
 
 image = Image.open('jesap.png')
 
