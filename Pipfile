@@ -8,6 +8,7 @@ streamlit = "*"
 gspread = "*"
 oauth2client = "*"
 gsheetsdb = "*"
+pillow = "*"
 
 [dev-packages]
 
