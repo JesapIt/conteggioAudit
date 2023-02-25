@@ -60,7 +60,7 @@ if sub and nome != '':
 			double +=1
 			current_work = w
 	if double == 0:
-		st.error('Nessuna risorsa trovata con questo nome/congome')
+		st.error('Nessuna risorsa trovata con questo nome/cognome')
 
 	elif double > 1:
 		st.warning('Sono state trovate più risorse con questo nome/cognome, cerca di essre più specifico')
