@@ -4,6 +4,11 @@ import gspread
 from gspread import Cell
 from datetime import date
 import datetime
+from PIL import image
+
+image = Image.open('jesap.png')
+
+st.image(image)
 
 st.set_page_config(page_title='Conteggio Ore', page_icon = '🕰️', initial_sidebar_state = 'auto')
 hide_streamlit_style = """
