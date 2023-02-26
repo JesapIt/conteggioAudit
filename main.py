@@ -29,11 +29,15 @@ client = gspread.authorize(creds)
 st.markdown('## Area Audit')
 st.markdown('### [Link google sheet](https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcfV2bhGURgrsAoIdbGM/edit#gid=0)')
 
+def clear_multi():
+    st.session_state.multi = []
+    return
 
 # --- Interfaccia ----
 nome = st.text_input('Nome e/o Cognome')
 data = st.date_input('Data', value=date.today())
 options = ['call', 'formazione', 'task', 'progetto', 'altro']
+
 att = st.multiselect('Attività', options, key="multi")
 dictionary = {}
 for a in att:
@@ -44,10 +48,8 @@ data = data.strftime("%d/%m/%Y")
 
 sub = st.button("Invia")
 
-def clear_multi():
-    st.session_state.multi = []
-    return
-st.session_state
+
+#st.session_state
 
 
 
