@@ -46,7 +46,7 @@ for a in att:
 
 data = data.strftime("%d/%m/%Y")
 temp_att = att
-sub = st.button("Invia")#,on_click=clear_multi)
+sub = st.button("Invia")
 
 
 #st.session_state
@@ -59,6 +59,7 @@ link_audit = "https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcf
 sht = client.open_by_url(link_audit)
 # -- Selecting current worksheet ---
 if sub and nome != '':
+	st.session_state.multi = []
 	double = 0
 	for w in sht.worksheets():
 		lower_title = w.title.lower()
