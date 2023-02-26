@@ -37,7 +37,7 @@ def clear_multi():
 	st.session_state.multi = []
 	return
 def fun():
-	if sub and nome != '':
+	if nome != '':
 		double = 0
 		for w in sht.worksheets():
 			lower_title = w.title.lower()
