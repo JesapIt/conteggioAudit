@@ -71,7 +71,7 @@ def fun():
 nome = st.text_input('Nome e/o Cognome')
 data = st.date_input('Data', value=date.today())
 options = ['Call d\'area', 'Assemblea mensile', 'Delega', 'Recruiting', 'Mentoring', 'Progetto esterno'
-,'Progetto interno', 'Formazione', 'Call HR buddy', 'Organizzazione area', 'Task interno', 'Evento']
+,'Progetto interno', 'Formazione', 'Call HR buddy', 'Organizzazione area', 'Task interno', 'Evento', 'Report d\'area', 'Altri report', 'Auditing progetto', 'PowerBI']
 
 att = st.multiselect('Attività', options, key="multi")
 dictionary = {}
