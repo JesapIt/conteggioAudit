@@ -29,6 +29,10 @@ client = gspread.authorize(creds)
 st.markdown('## Area Audit')
 st.markdown('### [Link google sheet](https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcfV2bhGURgrsAoIdbGM/edit#gid=0)')
 
+link_audit = "https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcfV2bhGURgrsAoIdbGM/edit#gid=0"
+sht = client.open_by_url(link_audit)
+# -- Selecting current worksheet ---
+
 def clear_multi():
 	st.session_state.multi = []
 	return
@@ -87,9 +91,7 @@ sub = st.button("Invia",on_click=fun)
 
 
 
-link_audit = "https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcfV2bhGURgrsAoIdbGM/edit#gid=0"
-sht = client.open_by_url(link_audit)
-# -- Selecting current worksheet ---
+
 
 	
 
