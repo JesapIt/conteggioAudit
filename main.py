@@ -33,10 +33,8 @@ link_audit = "https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcf
 sht = client.open_by_url(link_audit)
 # -- Selecting current worksheet ---
 
-def clear_multi():
-	st.session_state.multi = []
-	return
 def fun():
+	st.session_state.multi = []
 	if nome != '':
 		double = 0
 		for w in sht.worksheets():
