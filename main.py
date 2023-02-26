@@ -34,7 +34,7 @@ st.markdown('### [Link google sheet](https://docs.google.com/spreadsheets/d/1uZV
 nome = st.text_input('Nome e/o Cognome')
 data = st.date_input('Data', value=date.today())
 options = ['call', 'formazione', 'task', 'progetto', 'altro']
-att = st.multiselect('Attività', options)
+att = st.multiselect('Attività', options, key="multi")
 dictionary = {}
 for a in att:
 	n_ore = st.time_input(f'Numero di ore {a}', datetime.time(1, 0), key=a)
@@ -43,6 +43,11 @@ for a in att:
 data = data.strftime("%d/%m/%Y")
 
 sub = st.button("Invia")
+
+def clear_multi():
+    st.session_state.multi = []
+    return
+st.session_state
 
 
 
@@ -80,9 +85,8 @@ if sub and nome != '':
 			#current_work.update_cell(row , 2, a)
 			#current_work.update_cell(row , 3, str(dictionary[a]).replace(':', '.'))
 
-
+		clear_multi()
 		st.success(f'Conteggio ore di {current_work.title} aggiornato')
-		att= []
 	
 
 
