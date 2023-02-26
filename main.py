@@ -32,32 +32,6 @@ st.markdown('### [Link google sheet](https://docs.google.com/spreadsheets/d/1uZV
 def clear_multi():
 	st.session_state.multi = []
 	return
-
-# --- Interfaccia ----
-nome = st.text_input('Nome e/o Cognome')
-data = st.date_input('Data', value=date.today())
-options = ['call', 'formazione', 'task', 'progetto', 'altro']
-
-att = st.multiselect('Attività', options, key="multi")
-dictionary = {}
-for a in att:
-	n_ore = st.time_input(f'Numero di ore {a}', datetime.time(1, 0), key=a)
-	dictionary[a] = n_ore
-
-data = data.strftime("%d/%m/%Y")
-temp_att = att
-sub = st.button("Invia",on_click=fun)
-
-
-#st.session_state
-
-
-
-
-
-link_audit = "https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcfV2bhGURgrsAoIdbGM/edit#gid=0"
-sht = client.open_by_url(link_audit)
-# -- Selecting current worksheet ---
 def fun():
 	if sub and nome != '':
 		double = 0
@@ -90,6 +64,33 @@ def fun():
 
 			st.success(f'Conteggio ore di {current_work.title} aggiornato')
 	return
+
+# --- Interfaccia ----
+nome = st.text_input('Nome e/o Cognome')
+data = st.date_input('Data', value=date.today())
+options = ['call', 'formazione', 'task', 'progetto', 'altro']
+
+att = st.multiselect('Attività', options, key="multi")
+dictionary = {}
+for a in att:
+	n_ore = st.time_input(f'Numero di ore {a}', datetime.time(1, 0), key=a)
+	dictionary[a] = n_ore
+
+data = data.strftime("%d/%m/%Y")
+temp_att = att
+sub = st.button("Invia",on_click=fun)
+
+
+#st.session_state
+
+
+
+
+
+link_audit = "https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcfV2bhGURgrsAoIdbGM/edit#gid=0"
+sht = client.open_by_url(link_audit)
+# -- Selecting current worksheet ---
+
 	
 
 
