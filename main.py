@@ -82,6 +82,7 @@ if sub and nome != '':
 
 
 		st.success(f'Conteggio ore di {current_work.title} aggiornato')
+		att= []
 	
 
 
