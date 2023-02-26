@@ -70,7 +70,8 @@ def fun():
 # --- Interfaccia ----
 nome = st.text_input('Nome e/o Cognome')
 data = st.date_input('Data', value=date.today())
-options = ['call', 'formazione', 'task', 'progetto', 'altro']
+options = ['Call d\'area', 'Assemblea mensile', 'Delega', 'Recruiting', 'Mentoring', 'Progetto esterno'
+,'Progetto interno', 'Formazione', 'Call HR buddy', 'Organizzazione area', 'Task interno', 'Evento']
 
 att = st.multiselect('Attività', options, key="multi")
 dictionary = {}
