@@ -46,7 +46,7 @@ for a in att:
 
 data = data.strftime("%d/%m/%Y")
 
-sub = st.button("Invia")
+sub = st.button("Invia",on_click=clear_multi)
 
 
 #st.session_state
@@ -87,7 +87,6 @@ if sub and nome != '':
 			#current_work.update_cell(row , 2, a)
 			#current_work.update_cell(row , 3, str(dictionary[a]).replace(':', '.'))
 
-		clear_multi()
 		st.success(f'Conteggio ore di {current_work.title} aggiornato')
 	
 
