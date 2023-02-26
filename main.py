@@ -54,7 +54,7 @@ sub = st.button("Invia")#,on_click=clear_multi)
 
 
 
-
+clear_multi()
 link_audit = "https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcfV2bhGURgrsAoIdbGM/edit#gid=0"
 sht = client.open_by_url(link_audit)
 # -- Selecting current worksheet ---
