@@ -30,8 +30,7 @@ st.markdown('## Area Audit')
 st.markdown('### [Link google sheet](https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcfV2bhGURgrsAoIdbGM/edit#gid=0)')
 
 def clear_multi():
-	if 'multi' in st.session_state:
-		st.session_state.multi = []
+	st.session_state.multi = []
 	return
 
 # --- Interfaccia ----
@@ -55,7 +54,7 @@ sub = st.button("Invia")#,on_click=clear_multi)
 
 
 
-clear_multi()
+
 link_audit = "https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcfV2bhGURgrsAoIdbGM/edit#gid=0"
 sht = client.open_by_url(link_audit)
 # -- Selecting current worksheet ---
