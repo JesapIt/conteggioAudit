@@ -30,8 +30,9 @@ st.markdown('## Area Audit')
 st.markdown('### [Link google sheet](https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcfV2bhGURgrsAoIdbGM/edit#gid=0)')
 
 def clear_multi():
-    st.session_state.multi = []
-    return
+	if 'multi' not in st.session_state:
+		st.session_state.multi = []
+	return
 
 # --- Interfaccia ----
 nome = st.text_input('Nome e/o Cognome')
