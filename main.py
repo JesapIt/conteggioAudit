@@ -45,7 +45,7 @@ for a in att:
 	dictionary[a] = n_ore
 
 data = data.strftime("%d/%m/%Y")
-
+temp_att = att
 sub = st.button("Invia",on_click=clear_multi)
 
 
@@ -77,7 +77,7 @@ if sub and nome != '':
 			str_list = list(filter(None, worksheet.col_values(1)))
 			return str(len(str_list)+1)
 
-		for a in att:
+		for a in temp_att:
 			row = next_available_row(current_work)
 			c1 = Cell(int(row) , 1, str(data))
 			c2 = Cell(int(row) , 2, a)
