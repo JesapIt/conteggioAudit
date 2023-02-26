@@ -30,7 +30,7 @@ st.markdown('## Area Audit')
 st.markdown('### [Link google sheet](https://docs.google.com/spreadsheets/d/1uZV3_xkx1lxAI0GIUXad44dgcfV2bhGURgrsAoIdbGM/edit#gid=0)')
 
 def clear_multi():
-	if 'multi' not in st.session_state:
+	if 'multi' in st.session_state:
 		st.session_state.multi = []
 	return
 
