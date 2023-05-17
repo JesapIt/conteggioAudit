@@ -43,9 +43,13 @@ def fun():
 		double_inprova = 0
 		for w in sht.worksheets():
 			lower_title = w.title.lower()
+			index_inprova = lower_title.find("- socio in prova")
+			if (index_inprova >= 0):
+				lower_title = lower_title[0:index_inprova-1]
+			st.write(lower_title)
 			lower_name = nome.lower()
 			if lower_name in lower_title:
-				if (lower_title.find("socio in prova") >= 0):
+				if (index_inprova >= 0):
 					double_inprova += 1
 					work_inprova = w
 				else:
@@ -53,6 +57,7 @@ def fun():
 					work = w
 		if double == 0 and double_inprova == 0:
 			st.error('Nessuna risorsa trovata con questo nome/cognome')
+			return
 		if double > 1 and (not in_prova):
 			st.warning('Sono state trovate più risorse con questo nome/cognome, cerca di essre più specifico.')
 			return
@@ -96,7 +101,7 @@ nome = st.text_input('Nome e/o Cognome. Se Socio in prova, spunta la checkbox re
 in_prova = st.checkbox('Socio in Prova')
 data = st.date_input('Data', value=date.today())
 options = ['Call d\'area', 'Assemblea mensile', 'Delega', 'Recruiting', 'Mentoring', 'Progetto esterno'
-,'Progetto interno', 'Formazione', 'Call con HR buddy', 'Organizzazione area', 'Task interno', 'Altro', 'Evento', 'Revisione Task', 'Report d\'area', 'Altri report', 'Auditing progetto', 'PowerBI', 'Board Resp/Resp Vice']
+,'Progetto interno', 'Formazione', 'Call con HR buddy', 'Organizzazione area', 'Task interno', 'Altro', 'Evento', 'Revisione Task', 'Report d\'area', 'Altri report', 'Auditing progetto', 'PowerBI', 'Board Resp/Resp Vice', 'Case study']
 
 att = st.multiselect('Attività', options, key="multi")
 dictionary = {}
