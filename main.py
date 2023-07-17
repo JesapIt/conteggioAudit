@@ -108,18 +108,24 @@ temp_att = []
 for a in att:
 	if a == "Progetto esterno":
 		### estrazione nomi progetti in corso
-		prog_link = "https://docs.google.com/spreadsheets/d/1-bXwTiVfxFYbFKHCeJyocKIKCQsn0ZIK4Kq7Q8A9ND8/edit#gid=387523138"
+		prog_link = "https://docs.google.com/spreadsheets/d/1kaiBTPxp-o0IVn1j54QGuPJOeYdHxJ9Iqg30QwYqnGI/edit#gid=1965451645"
 		prog_spread_sht = client.open_by_url(prog_link)
 		prog_sht = prog_spread_sht.get_worksheet(1)
 
-		column_b = prog_sht.col_values(2)  # Column B is index 2
-		column_d = prog_sht.col_values(4)  # Column D is index 4
-		column_e = prog_sht.col_values(5)
+		column_b = prog_sht.col_values(1)  # Column B (poi diventata colonna A con nuovo foglio) is index 1
+		column_d = prog_sht.col_values(3)  # Column D (poi diventata colonna C con nuovo foglio) is index 3
+		column_e = prog_sht.col_values(4)
+
+		print(column_b)
+		print(column_d)
+		print(column_e)
 
 		progetti_in_corso = []
 		for name, value, state in zip(column_b, column_d, column_e):
-			if value.lower() == 'in corso' and state.lower() == 'progetto esterno':
+			if (value.lower() == 'in corso' and state.lower() == 'progetto esterno') or (value.lower() == 'in avvio' and state.lower() == 'progetto esterno'):
 				progetti_in_corso.append(name)
+				print("sono i nomi")
+				print(name)
 		### fine estrazione
 		sel_prog = st.selectbox("Selezionare il progetto", progetti_in_corso)
 		if sel_prog:
