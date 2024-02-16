@@ -99,8 +99,8 @@ def fun():
 nome = st.text_input('Nome e/o Cognome. Se Socio in prova, spunta la checkbox relativa')
 in_prova = st.checkbox('Socio in Prova')
 data = st.date_input('Data', value=date.today())
-options = ['Call d\'area', 'Assemblea mensile', 'Delega', 'Recruiting', 'Mentoring', 'Progetto esterno'
-,'Progetto interno', 'Formazione', 'Call con HR buddy', 'Organizzazione area', 'Task interno', 'Altro', 'Evento', 'Revisione Task', 'Report d\'area', 'Altri report', 'Auditing progetto', 'PowerBI', 'Board Resp/Resp Vice', 'Case study']
+options = ['Call d\'area', 'Assemblea mensile', 'Call con HR buddy', 'Board Resp/Resp Vice', 'Evento', 'Progetto Interno', 'Task Interno', 'Google Sheets', 'PowerBI', 'Make', 'BPMN', 
+	   'Task esterno', 'Report d\'area', 'Altri report', 'Formazione', 'Mentoring', 'Recruiting', 'Progetto esterno', 'Auditing progetto', 'Organizzazione area', 'Revisione task', 'Delega', 'Altro']
 
 att = st.multiselect('Attività', options, key="multi")
 dictionary = {}
